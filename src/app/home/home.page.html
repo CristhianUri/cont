@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      My first APP
+    </ion-title>
+
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      
+      <ion-title size="large">My first App</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <strong>Contador </strong>
+
+    
+    <p>Contador: {{counter}}</p>
+
+    <ion-button color="danger" *ngIf="counter > 10" >Alerta, ya se exedio de los 10 clicks</ion-button>
+  
+    
+    <ion-button (click)="incrementar()">+1</ion-button>
+    <ion-button (click)="reset()">reset</ion-button>
+   
+    
+
+  </div>
+</ion-content>
